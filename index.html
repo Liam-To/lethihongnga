@@ -16,13 +16,14 @@ a{color:var(--accent);text-underline-offset:3px}
 a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
 .layout{display:grid;grid-template-columns:minmax(0,1fr);max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
 .side{padding:40px 0 24px}
-.side h1{font-size:clamp(28px,4vw,38px);line-height:1.15;margin:0 0 10px;font-weight:700;letter-spacing:-0.01em}
+.side h1{font-size:clamp(26px,3.2vw,32px);line-height:1.15;margin:0 0 10px;font-weight:700;letter-spacing:-0.01em;text-wrap:balance}
 .role{margin:0 0 20px;color:var(--muted);max-width:30ch}
 .contact{list-style:none;padding:0;margin:0 0 24px;font-size:15px}
 .contact li{margin:4px 0}
 .index{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:15px;border-top:1px solid var(--line);padding-top:16px}
 .index a{text-decoration:none;color:var(--ink);padding:2px 0;border-bottom:1px solid transparent}
 .index a:hover{border-bottom-color:var(--accent)}
+.index a[aria-current="true"]{color:var(--accent);font-weight:600;border-bottom-color:var(--accent)}
 .intro{font-size:clamp(20px,2.4vw,24px);line-height:1.45;margin:0 0 56px;max-width:36ch;font-weight:500}
 .project{padding:40px 0 56px;border-top:1px solid var(--line)}
 .project h2{margin:0;font-size:clamp(26px,3.2vw,34px);line-height:1.2;font-weight:700}
@@ -52,7 +53,7 @@ dialog::backdrop{background:rgba(8,10,14,.82)}
 dialog img{display:block;max-width:96vw;max-height:90vh;border-radius:6px;background:var(--frame)}
 dialog button{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);right:16px;padding:8px 14px;border-radius:6px;border:0;font:inherit;font-weight:600;background:#fff;color:#111;cursor:pointer}
 @media (min-width:1000px){
- .layout{grid-template-columns:260px minmax(0,1fr);column-gap:64px}
+ .layout{grid-template-columns:300px minmax(0,1fr);column-gap:56px}
  .side{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;padding:56px 0 24px}
  .index{flex-direction:column;gap:8px}
  .main{padding-top:56px}
@@ -99,6 +100,23 @@ dialog button{position:fixed;top:calc(env(safe-area-inset-top,0px) + 12px);right
    document.getElementById('lottie-fig').hidden=false;
   }
  }catch(e){}
+})();
+(function(){
+ var links=[].slice.call(document.querySelectorAll('.index a'));
+ var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+ var secs=Object.keys(map).map(function(id){return document.getElementById(id);}).filter(Boolean);
+ function setActive(id){links.forEach(function(a){if(a===map[id]){a.setAttribute('aria-current','true');}else{a.removeAttribute('aria-current');}});}
+ function update(){
+  var y=window.innerHeight*0.3,current=secs.length?secs[0].id:null;
+  secs.forEach(function(sec){if(sec.getBoundingClientRect().top<=y){current=sec.id;}});
+  if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4&&secs.length){current=secs[secs.length-1].id;}
+  if(current){setActive(current);}
+ }
+ var ticking=false;
+ window.addEventListener('scroll',function(){if(!ticking){ticking=true;window.requestAnimationFrame(function(){update();ticking=false;});}},{passive:true});
+ window.addEventListener('resize',update);
+ links.forEach(function(a){a.addEventListener('click',function(){setActive(a.getAttribute('href').slice(1));});});
+ update();
 })();
 (function(){
 var lb=document.getElementById('lb'),im=document.getElementById('lbimg');
