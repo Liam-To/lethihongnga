@@ -4,6 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Le Thi Hong Nga - UI/UX Designer Portfolio</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL99NTFTK9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZL99NTFTK9');
+</script>
+
 <style>
 :root{--bg:#F5F6F8;--ink:#161D29;--muted:#566173;--line:#D8DDE5;--accent:#1B4FD6;--frame:#E9ECF1;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -125,6 +135,29 @@ document.querySelectorAll('.zoom').forEach(function(b){
 });
 document.getElementById('lbclose').addEventListener('click',function(){lb.close();});
 lb.addEventListener('click',function(e){if(e.target===lb||e.target===im){lb.close();}});
+})();
+</script>
+<script>
+(function(){
+ function send(name,params){try{if(window.gtag){window.gtag('event',name,params||{});}}catch(e){}}
+ document.addEventListener('click',function(e){
+  var a=e.target.closest?e.target.closest('a'):null; if(!a||!a.href){return;}
+  var u=a.href;
+  if(u.indexOf('mailto:')===0){send('click_email');}
+  else if(u.indexOf('tel:')===0){send('click_phone');}
+  else if(u.indexOf('linkedin.com')>-1){send('click_linkedin');}
+  else if(u.indexOf('youtube.com')>-1){send('click_video',{video_url:u});}
+  else if(u.indexOf('figma.com')>-1){send('click_figma');}
+ });
+ if('IntersectionObserver' in window){
+  var seen={};
+  var io=new IntersectionObserver(function(entries){
+   entries.forEach(function(en){
+    if(en.isIntersecting&&!seen[en.target.id]){seen[en.target.id]=1;send('view_project',{project:en.target.id});}
+   });
+  },{threshold:0.25});
+  [].slice.call(document.querySelectorAll('section.project, #challenge')).forEach(function(s){io.observe(s);});
+ }
 })();
 </script>
 </body>
