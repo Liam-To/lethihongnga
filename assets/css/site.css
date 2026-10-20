@@ -141,3 +141,10 @@ footer.site a{color:var(--muted)}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 @media print{header.site,.mobilebar,footer.site,.theme,.banner,.eyebrow,.actions,.contact,section.block{display:none}.case-head{padding:0 0 12px}body{background:#fff;color:#000}}
+
+.thumb.tokens{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4);align-content:center;padding:var(--s5);background:var(--surface-2);aspect-ratio:16/10}
+.thumb.tokens code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;line-height:1.8;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:var(--r1);padding:var(--s3);align-self:center}
+.prooflink{display:flex;justify-content:space-between;align-items:center;gap:var(--s5);flex-wrap:wrap;margin-top:var(--s5);padding:var(--s4) var(--s5);border:1px solid var(--accent);border-radius:var(--r2);background:var(--surface);max-width:none}
+.prooflink b{display:block;font-weight:500}
+.prooflink span{display:block;color:var(--muted);font-size:15px;max-width:52ch}
+.prooflink .btn{border-color:var(--accent);color:var(--ink)}
