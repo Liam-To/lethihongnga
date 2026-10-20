@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Design systems | Le Thi Hong Nga</title>
+<meta name="description" content="Design systems with Figma variables, variants and written usage rules, implemented in code: evidence from Lighthouse, Smart Security, Poscura and a recent design challenge.">
+<link rel="canonical" href="https://liam-to.github.io/lethihongnga/systems.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Design systems | Le Thi Hong Nga">
+<meta property="og:description" content="Design systems with Figma variables, variants and written usage rules, implemented in code: evidence from Lighthouse, Smart Security, Poscura and a recent design challenge.">
+<meta property="og:url" content="https://liam-to.github.io/lethihongnga/systems.html">
+<meta property="og:image" content="https://liam-to.github.io/lethihongnga/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F6F3EE">
+<script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark'&&t!=='night'){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Newsreader:ital,wght@1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL99NTFTK9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZL99NTFTK9');
+</script>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Le Thi Hong Nga</a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="main" id="nav" aria-label="Main" data-open="false">
+<a href="index.html#work">Work</a><a href="systems.html" aria-current="page">Systems</a><a href="about.html">About</a><a href="resume.html">Resume</a>
+<div class="theme" role="group" aria-label="Theme"><button type="button" data-theme-set="light" aria-pressed="true">Light</button><button type="button" data-theme-set="dark" aria-pressed="false">Dark</button><button type="button" data-theme-set="night" aria-pressed="false">Night</button></div>
+</nav>
+</div></header>
+<main id="main" class="case">
+<section class="case-head"><div class="wrap">
+<span class="eyebrow">Design systems</span>
+<h1>Design systems that hold up in production</h1>
+<p class="lede">I build systems as variants, properties, variables and written rules, then implement them in code. Here is the evidence from four projects.</p>
+</div></section>
+<div class="wrap">
+<section style="border-top:0;padding-top:0" aria-labelledby="p-h"><h2 id="p-h">Principles</h2>
+<div class="cols3"><div class="principle"><h3>Write the rule into the component</h3><p class="muted">Usage guidance lives on the component, so the next designer or developer does not need to ask.</p></div><div class="principle"><h3>Design every state</h3><p class="muted">Default, loading, error, disabled, armed, alarm. A component is not done until its states are.</p></div><div class="principle"><h3>One system, every surface</h3><p class="muted">Mobile, desktop, landing page and CMS draw from the same library and tokens.</p></div></div></section>
+<section aria-labelledby="a-h" data-view="sys_challenge"><h2 id="a-h">Recent design challenge (2026)</h2>
+<div class="prose"><p>A take-home challenge for a limited-time reward campaign: a mobile game app and a desktop backoffice sharing one component library.</p>
+<p>The library has variants, component properties, color and radius variables, and separate text and effect styles for mobile and backoffice. Usage rules are written into the components, for example which button is the primary action and that a loading state locks the button.</p>
+<p>The backoffice protects live campaigns with guards. Changes apply from the next daily reset or immediately, pausing needs a reason saved to an audit log, and ending a campaign requires typing its name. A discard warning protects unsaved edits.</p>
+<p><a href="https://www.figma.com/design/ulewzMRWdVX2It2nRSVAWI/Limited-Time-Reward-Campaign?node-id=50-94">Open the Figma file (view only)</a></p></div></section>
+<section aria-labelledby="b-h"><h2 id="b-h">Lighthouse: one interface in three themes</h2>
+<div class="prose" style="margin-bottom:var(--s5)"><p>The same layout and components work in light, dark and night modes, so ship operators keep the interface they know in every operating condition.</p></div>
+<div class="cols3"><figure><div class="frame"><img src="assets/img/lh-light.webp" width="1280" height="800" alt="Lighthouse home screen in light theme" loading="lazy"></div><figcaption>Light.</figcaption></figure><figure><div class="frame"><img src="assets/img/lh-dark.webp" width="1280" height="800" alt="Lighthouse home screen in dark theme" loading="lazy"></div><figcaption>Dark.</figcaption></figure><figure><div class="frame"><img src="assets/img/lh-night.webp" width="1280" height="800" alt="Lighthouse home screen in night theme" loading="lazy"></div><figcaption>Night.</figcaption></figure></div></section>
+<section aria-labelledby="c-h"><h2 id="c-h">Smart Security: states you cannot mistake</h2>
+<div class="prose" style="margin-bottom:var(--s5)"><p>Disarmed and alarm are distinct at a glance: a green unlocked state on a white screen, and a red alarm state with a striped background. I also built Lottie animations for state feedback.</p></div>
+<figure><div class="frame"><img src="assets/img/ss-states.webp" width="1200" height="509" alt="Smart Security disarmed and alarm states on tablets" loading="lazy"></div><figcaption>Disarmed and alarm.</figcaption></figure></section>
+<section aria-labelledby="d-h"><h2 id="d-h">Poscura: one library across mobile, desktop and CMS</h2>
+<div class="prose" style="margin-bottom:var(--s5)"><p>Components and patterns created and maintained in Figma keep the apps, the landing page and the CMS consistent.</p></div>
+<div class="cols2"><figure><div class="frame"><img src="assets/img/po-hero.webp" width="1232" height="679" alt="Poscura on laptop and phones" loading="lazy"></div><figcaption>Apps.</figcaption></figure><figure><div class="frame"><img src="assets/img/po-cms-prog.webp" width="1500" height="734" alt="Poscura CMS programs list" loading="lazy"></div><figcaption>CMS.</figcaption></figure></div></section>
+<section aria-labelledby="e-h"><h2 id="e-h">From design to code</h2>
+<div class="prose" style="margin-bottom:var(--s5)"><p>I translate approved designs into reusable front-end components in HTML, SCSS, Bootstrap, Vue, React and TypeScript, for Merchant Site, MYTHACO and Fit4Stream. That is where a system proves itself: the same decisions, built.</p></div>
+<figure><div class="frame"><img src="assets/img/ms-devices.webp" width="1400" height="755" alt="Merchant Site on tablet, phone and desktop" loading="lazy"></div><figcaption>Merchant Site, built in Bootstrap and Vue.</figcaption></figure></section>
+<section class="pn" style="border-bottom:0"><a href="about.html">Next: About</a><a href="mailto:ngalth81@gmail.com?subject=Role%20enquiry%20for%20Le%20Thi%20Hong%20Nga" data-cta="systems_email">Email me about a project</a></section>
+</div></main>
+<section class="block tight" aria-labelledby="contact-h"><div class="wrap"><div class="contact" data-view="contact">
+<h2 id="contact-h">Hiring for a complex product? Let's talk.</h2>
+<div class="actions"><a class="btn primary" href="mailto:ngalth81@gmail.com?subject=Role%20enquiry%20for%20Le%20Thi%20Hong%20Nga" data-loc="contact_band" data-cta="contact_email">Email me</a><a class="btn secondary" href="resume.pdf" data-cta="contact_resume">Download resume</a><a class="btn secondary" href="https://www.linkedin.com/in/le-thi-hong-nga-a3a97023/">LinkedIn</a></div>
+</div></div></section>
+<footer class="site"><div class="wrap">
+<span>Le Thi Hong Nga · Ho Chi Minh City</span>
+<span><a href="mailto:ngalth81@gmail.com?subject=Role%20enquiry%20for%20Le%20Thi%20Hong%20Nga" data-loc="footer">ngalth81@gmail.com</a> · <a href="https://www.linkedin.com/in/le-thi-hong-nga-a3a97023/">LinkedIn</a> · <a href="resume.pdf">Resume (PDF)</a> · <a href="archive.html">All projects</a></span>
+</div></footer>
+<div class="mobilebar"><a class="btn primary" href="mailto:ngalth81@gmail.com?subject=Role%20enquiry%20for%20Le%20Thi%20Hong%20Nga" data-loc="mobilebar" data-cta="mobilebar_email">Email me</a><a class="btn secondary" href="resume.pdf" data-cta="mobilebar_resume">Resume</a></div>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

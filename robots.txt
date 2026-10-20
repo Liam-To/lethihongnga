@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://liam-to.github.io/lethihongnga/sitemap.xml
