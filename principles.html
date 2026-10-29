@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Design principles | Le Thi Hong Nga</title>
+<meta name="description" content="Design principles that I check on every screen, each shown with a real example: reward app, backoffice form, Smart Security states, Lighthouse themes and a campaign lifecycle.">
+<link rel="canonical" href="https://liam-to.github.io/lethihongnga/principles.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Design principles | Le Thi Hong Nga">
+<meta property="og:description" content="Design principles that I check on every screen, each shown with a real example: reward app, backoffice form, Smart Security states, Lighthouse themes and a campaign lifecycle.">
+<meta property="og:url" content="https://liam-to.github.io/lethihongnga/principles.html">
+<meta property="og:image" content="https://liam-to.github.io/lethihongnga/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F6F3EE">
+<script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark'&&t!=='night'){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'}document.documentElement.setAttribute('data-theme',t)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Newsreader:ital,wght@1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL99NTFTK9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZL99NTFTK9');
+</script>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Le Thi Hong Nga</a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="main" id="nav" aria-label="Main" data-open="false">
+<a href="index.html#work">Work</a><a href="systems.html">Systems</a><a href="about.html">About</a><a href="resume.html">Resume</a>
+<div class="theme" role="group" aria-label="Theme"><button type="button" data-theme-set="light" aria-pressed="true">Light</button><button type="button" data-theme-set="dark" aria-pressed="false">Dark</button><button type="button" data-theme-set="night" aria-pressed="false">Night</button></div>
+</nav>
+</div></header>
+<main id="main" class="case">
+<section class="case-head"><div class="wrap">
+<span class="eyebrow">Principles</span>
+<h1>Design principles: what I check on every screen</h1>
+<p class="lede">Principles I have distilled from my own work and learning. Each one is tied to a real screen, so you can judge how I apply it.</p>
+</div></section>
+<div class="wrap">
+<section style="border-top:0;padding-top:0" aria-labelledby="ten-h" data-view="principles_ten"><h2 id="ten-h">The ten ideas I keep coming back to</h2><ol class="list" style="columns:2;column-gap:var(--s7)"><li>Users scan before they read.</li><li>Clarity beats creativity.</li><li>One screen equals one goal.</li><li>Size creates hierarchy.</li><li>Contrast creates attention.</li><li>Whitespace improves comprehension.</li><li>Alignment creates trust.</li><li>Typography is a system.</li><li>Color must have meaning.</li><li>Great UI helps users achieve goals with minimum effort.</li></ol></section>
+<section aria-labelledby="six-h" data-view="principles_practice"><h2 id="six-h">Six of them, in practice</h2>
+<div class="prose" style="margin-bottom:var(--s6)"><p>Good UI is not decoration. It is communication: it helps users understand faster and reach their goals with less effort. These six examples come from the screens in my portfolio.</p></div>
+<div class="decision"><div><div class="kicker">Principle 1</div><h3>Users scan, they do not read</h3><p class="muted">Show the state and the next step at a glance, so a screen answers "what is this, what can I do, what is the main action" without effort.</p><p class="muted" style="margin-top:var(--s3)"><b style="font-weight:500;color:var(--ink)">In practice:</b> In the reward app the card always shows the time left, and its button changes with the state: Claim, a locked button with progress, View, Remind me.</p><p style="margin-top:var(--s3)"><a href="systems.html#challenge">See the reward challenge</a></p></div><figure><div class="frame"><img src="assets/img/pr-cards.webp" width="1600" height="616" alt="Promotion card in six states: eligible, not eligible, claimed today, expired, upcoming and paused, with a different call to action for each" loading="lazy"></div><figcaption>The same card component in every state. The call to action changes with the state.</figcaption></figure></div><div class="decision"><div><div class="kicker">Principle 2</div><h3>One screen, one goal</h3><p class="muted">Every screen has one main action, and when that action is not available the screen says why.</p><p class="muted" style="margin-top:var(--s3)"><b style="font-weight:500;color:var(--ink)">In practice:</b> Each reward screen has one primary button. When it is disabled, the text under it explains the reason, for example that the claim unlocks at 10 of 10 rounds.</p><p style="margin-top:var(--s3)"><a href="systems.html#challenge">See the reward challenge</a></p></div><figure><div class="frame"><img src="assets/img/pr-claims.webp" width="1600" height="567" alt="All claim states of the reward screen on mobile with a short explanation under each state" loading="lazy"></div><figcaption>Six claim states, each with a plain-language banner that explains what is happening and what to do next.</figcaption></figure></div><div class="decision"><div><div class="kicker">Principle 3</div><h3>Color must have meaning, and never work alone</h3><p class="muted">Each color has a job, and state is never shown by color only: color, icon and text work together.</p><p class="muted" style="margin-top:var(--s3)"><b style="font-weight:500;color:var(--ink)">In practice:</b> In Smart Security, disarmed is a green unlocked icon on a white screen with the word Disarmed, and alarm is red with a striped background, an alarm icon and the word Alarm.</p><p style="margin-top:var(--s3)"><a href="work/smart-security.html">See Smart Security</a></p></div><figure><div class="frame"><img src="assets/img/ss-states.webp" width="1200" height="509" alt="Smart Security disarmed and alarm states on tablets" loading="lazy"></div><figcaption>Disarmed and alarm are unmistakable at a glance, and still clear without color.</figcaption></figure></div><div class="decision"><div><div class="kicker">Principle 4</div><h3>Forms must reduce friction</h3><p class="muted">Break long forms into small steps, say what is wrong where it is wrong, and show the result as you type.</p><p class="muted" style="margin-top:var(--s3)"><b style="font-weight:500;color:var(--ink)">In practice:</b> The campaign form is split into four sections, shows a live preview of the player card, lists problems in a summary at the top with jump links, and puts a message on each field.</p><p style="margin-top:var(--s3)"><a href="systems.html#challenge">See the reward challenge</a></p></div><figure><div class="frame"><img src="assets/img/pr-form.webp" width="1600" height="1127" alt="Backoffice new campaign form with an error summary, four sections and a live player preview" loading="lazy"></div><figcaption>Validation errors in the backoffice: a summary at the top and a message on each field.</figcaption></figure></div><div class="decision"><div><div class="kicker">Principle 5</div><h3>Consistency beats creativity</h3><p class="muted">Define it once, then use it everywhere. A design system is what lets a product scale.</p><p class="muted" style="margin-top:var(--s3)"><b style="font-weight:500;color:var(--ink)">In practice:</b> Lighthouse keeps one layout and one set of components in light, dark and night modes. In the reward challenge, one Figma library with variants, variables and written usage rules serves the mobile app and the backoffice.</p><p style="margin-top:var(--s3)"><a href="work/lighthouse.html">See Lighthouse</a></p></div><figure><div class="frame"><img src="assets/img/pr-themes.webp" width="1800" height="371" alt="Lighthouse home screen in light, dark and night themes side by side" loading="lazy"></div><figcaption>One interface, three themes.</figcaption></figure></div><div class="decision"><div><div class="kicker">Principle 6</div><h3>Design every state</h3><p class="muted">A component is not finished until its states are. States decide what users see and what they can do.</p><p class="muted" style="margin-top:var(--s3)"><b style="font-weight:500;color:var(--ink)">In practice:</b> A campaign moves through Draft, Active, Paused and Ended. Each state decides what can be edited and which actions are allowed, and guards scale with the consequence: pausing carries one warning, ending a campaign carries a stronger, double warning.</p><p style="margin-top:var(--s3)"><a href="systems.html#challenge">See the reward challenge</a></p></div><figure><div class="frame"><img src="assets/img/lt-flow.webp" width="1289" height="760" alt="State diagram of a campaign lifecycle: Draft, Active, Paused and Ended, with publish, pause, resume, end now and duplicate transitions" loading="lazy"></div><figcaption>The campaign lifecycle and the actions that move a campaign between states.</figcaption></figure></div></section>
+<section aria-labelledby="chk-h" data-view="principles_checklist"><h2 id="chk-h">My checklist</h2><div class="prose" style="margin-bottom:var(--s5)"><p>The questions I ask before I call a screen finished.</p></div><div class="cols4"><div class="principle"><h3>Hierarchy</h3><p class="muted">Is the primary action the most prominent?</p></div><div class="principle"><h3>Colors</h3><p class="muted">Does each color have a meaning?</p></div><div class="principle"><h3>Accessibility</h3><p class="muted">Can users with difficulties use it? Color is never the only signal.</p></div><div class="principle"><h3>Alignment</h3><p class="muted">Are all elements aligned properly?</p></div><div class="principle"><h3>Consistency</h3><p class="muted">Are components used consistently?</p></div><div class="principle"><h3>Spacing</h3><p class="muted">Is there enough whitespace?</p></div><div class="principle"><h3>Typography</h3><p class="muted">Is it easy to read?</p></div><div class="principle"><h3>Overall</h3><p class="muted">Can users understand it in five seconds?</p></div></div></section>
+<section class="pn" style="border-bottom:0"><a href="about.html">Back to About</a><a href="systems.html" data-cta="principles_systems">Next: Design systems</a></section>
+</div></main>
+
+<section class="block tight" aria-labelledby="contact-h"><div class="wrap"><div class="contact" data-view="contact">
+<div><h2 id="contact-h">Open to senior product design roles.</h2><p class="muted">Ho Chi Minh City · <a href="mailto:ngalth81@gmail.com?subject=Role%20enquiry%20for%20Le%20Thi%20Hong%20Nga" data-loc="contact_band">ngalth81@gmail.com</a></p></div>
+<div class="actions"><a class="btn primary" href="mailto:ngalth81@gmail.com?subject=Role%20enquiry%20for%20Le%20Thi%20Hong%20Nga" data-loc="contact_band" data-cta="contact_email">Email me</a><a class="btn secondary" href="resume.pdf" data-cta="contact_resume">Resume</a><a class="textlink" href="https://www.linkedin.com/in/le-thi-hong-nga-a3a97023/" target="_blank" rel="noopener noreferrer">LinkedIn</a></div>
+</div></div></section>
+<footer class="site"><div class="wrap">
+<span>Le Thi Hong Nga · Ho Chi Minh City</span>
+<span><a href="mailto:ngalth81@gmail.com?subject=Role%20enquiry%20for%20Le%20Thi%20Hong%20Nga" data-loc="footer">ngalth81@gmail.com</a> · <a href="https://www.linkedin.com/in/le-thi-hong-nga-a3a97023/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="resume.pdf">Resume (PDF)</a></span>
+</div></footer>
+<div class="mobilebar"><a class="btn primary" href="mailto:ngalth81@gmail.com?subject=Role%20enquiry%20for%20Le%20Thi%20Hong%20Nga" data-loc="mobilebar" data-cta="mobilebar_email">Email me</a><a class="btn secondary" href="resume.pdf" data-cta="mobilebar_resume">Resume</a></div>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
